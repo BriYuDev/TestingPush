@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    scroll-behavior: smooth;
+}
+
+.nav-bar {
+    background-color: #EFEFEF;;
+}
+
+.font-patua {
+    font-family: 'Patua One', cursive;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-text {
+    color :#979797;
+    transition: all 200ms;
+}
+
+.nav-text:active {
+    color: rgb(182, 182, 182);
+    scale: 1.03;
+}
+
+.cont-btn {
+    background: linear-gradient(95.69deg, #B557FF 25.56%, #6235E1 92.6%);
+    transition: all 200ms;
+}
+
+.cont-btn:active {
+    scale: 1.03;
+    box-shadow: 0 0 10px purple;
+}
+
+.section-text {
+    color: #905CFF;
+}
+
+.text-gradient1 {
+    background: linear-gradient(93.45deg, #6D13FF 44.52%, #DE0F59 65.15%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.text-gradient2 {
+    background: linear-gradient(93.45deg, #1371FF 44.52%, #BD00FF 65.15%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.text-gradient3 {
+    background: linear-gradient(90.89deg, #6100FF 22.7%, #FF00F5 84.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.text-h {
+    color: #494949;
+}
+
+.text-paragraph {
+    color: #636363;
+}
+
+.text-skill {
+    color: #AD00FF;
+}
+
+.text-skill2 {
+    color: #520078;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    animation-name: showanim;
+    animation-duration: 1s;
+    z-index: -5;
+}
+
+.Hi {
+    animation-name: hianim;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(.66,-0.03,.73,.03);
+}
+
+.Hola {
+    animation-name: holaanim;
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(.64,.31,.35,1.44);
+}
+
+.show-webdev {
+    animation-name: showwebdev;
+    animation-duration: 400ms;
+    opacity: 1;
+}
+
+.hide-webdev {
+    animation-name: hidewebdev;
+    animation-duration: 400ms;
+    opacity: 0;
+}
+
+@keyframes showwebdev {
+    from {
+        filter: blur(10px);
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to {
+        filter: blur(0);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.line-above, .line-below {
+    transition: all 400ms;
+}
+
+.menu-gradient {
+    background: linear-gradient(157.51deg, #0047FF -6.34%, #FF0000 107.04%);
+}
+
+.menu {
+    transition: all 1s;
+}
+
+.open-menu {
+    filter: blur(0);
+    opacity: 1;
+}
+
+.close-menu {
+    right: 120%;
+    filter: blur(1px);
+    opacity: 0;
+}
+
+.open > .line-above {
+    filter: blur(1px);
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.open > .line-below {
+    filter: blur(1px);
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.nav-mobile {
+    background: linear-gradient(90.13deg, #6821FF 16.06%, #FF067E 75.73%);
+}
+
+@keyframes hidewebdev {
+    to {
+        filter: blur(10px);
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    from {
+        filter: blur(0);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hianim {
+    from {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    to {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@keyframes holaanim {
+    from {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    to {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@keyframes showanim {
+    from {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-text:hover {
+        color: rgb(182, 182, 182);
+        scale: 1.03;
+    }
+
+    .cont-btn:hover {
+        scale: 1.03;
+        box-shadow: 0 0 10px purple;
+    }
+}
