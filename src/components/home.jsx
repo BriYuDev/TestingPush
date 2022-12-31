@@ -1,22 +1,10 @@
 import React, { Component } from 'react';
-import { programinglang } from '../assets/exporter';
+import { programinglang } from '../assets';
 
 class Home extends Component {
   state = {};
 
   componentDidMount() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    });
-
-    const hideelement = document.querySelectorAll('.hide');
-
-    hideelement.forEach((el) => observer.observe(el));
-
     const hitext = document.getElementById('hi-text');
     const webdevtext = document.getElementById('webdev');
 
@@ -64,12 +52,11 @@ class Home extends Component {
     return (
       <section id='home'>
         <div className='flex justify-center items-center'>
-          <h1 className={`relative text-[50px] font-patua section-text hide`}>
+          <h1
+            className={`relative text-[50px] font-patua section-text title-section hide`}
+          >
             &lt;
-            <span
-              id='hi-text'
-              className=''
-            >
+            <span id='hi-text' className=''>
               Hi
             </span>
             &gt;
@@ -78,19 +65,16 @@ class Home extends Component {
 
         <div className='mt-[72px] flex md:justify-between md:flex-row md:items-center flex-col'>
           <div className='flex justify-start flex-col'>
-            <h3 className='relative text-h font-poppins text-[20px] font-bold hide'>
+            <h3 className='order1 relative text-h font-poppins text-[20px] font-bold text-introduce hide'>
               I Like{' '}
-              <span
-                id='webdev'
-                className='inline-block text-gradient1'
-              >
+              <span id='webdev' className='inline-block text-gradient1'>
                 Web Developing
               </span>
             </h3>
-            <h1 className='relative text-h font-poppins text-[50px] font-bold hide'>
+            <h1 className='order2 relative text-h font-poppins text-[50px] text-introduce font-bold hide'>
               I'm <span className='inline-block text-gradient1'>BriYu</span>
             </h1>
-            <p className='relative font-[500] text-[20px] font-poppins text-paragraph max-w-[404px] hide'>
+            <p className='order3 relative font-[500] text-[20px] font-poppins text-introduce text-paragraph max-w-[404px] hide'>
               I am a Frontend Web Developer, always curious about web
               development, and always eager to learn new things.
             </p>

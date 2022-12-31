@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
-import { Navbar, Skills, Home, Footer } from './components/exporter';
+import { Navbar } from './components';
+import { Route, Routes } from 'react-router-dom';
+import { HomePage, ContactPage } from './pages';
 
 class App extends Component {
   state = {};
+
   render() {
     return (
       <div className='w-full overflow-hidden'>
-        <div className='sm:px-[40px] px-[20px] fixed flex justify-center items-center nav-bar w-full'>
+        <div className='z-[5] sm:px-[40px] px-[20px] fixed flex justify-center items-center nav-bar w-full'>
           <div className='w-full lg:max-w-[1024px]'>
             <Navbar />
           </div>
         </div>
 
-        <div className='sm:px-[40px] px-[20px] mt-[150px] sm:mt-[191px] flex justify-center items-start'>
-          <div className='w-full lg:max-w-[1024px]'>
-            <Home />
-            <Skills />
-            <Footer />
-          </div>
-        </div>
+        <Routes>
+          <Route path='' element={<HomePage />} />
+          <Route path='/contact' element={<ContactPage />} />
+        </Routes>
+        <script src='https://smtpjs.com/v3/smtp.js'></script>
       </div>
     );
   }

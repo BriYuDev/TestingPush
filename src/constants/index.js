@@ -1,3 +1,5 @@
+import { work1 } from "../assets/workimg"
+
 export const navLinks = [
     {
         id: '#home',
@@ -6,7 +8,11 @@ export const navLinks = [
     {
         id: '#skills',
         title: 'Skills',
-    }
+    },
+    {
+        id: '#works',
+        title: 'Work',
+    },
 ]
 
 export const skillsFrontend = [
@@ -41,8 +47,8 @@ export const skillsFrontend = [
     {
         id: 'tlcss',
         title: 'Tailwind CSS',
-        persentase: '50%',
-        persentasewidth: 'w-[50%]'
+        persentase: '75%',
+        persentasewidth: 'w-[75%]'
     },
 ]
 
@@ -67,4 +73,13 @@ export const skillsDesign = [
         persentase: '70%',
         persentasewidth: 'w-[70%]'
     },
+]
+
+export const pastWork = [
+    {
+        id: 'work1',
+        text: 'Fully Responsive Portfolio Web',
+        img: work1,
+        projectlink: 'https://sin-art.netlify.app'
+    }
 ]
